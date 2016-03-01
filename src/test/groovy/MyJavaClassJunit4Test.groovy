@@ -8,13 +8,13 @@ import static groovy.test.GroovyAssert.*
 class MyJavaClassJunit4Test {
 
     @BeforeClass
-    static void setUp() {
-        println "Inside setup()"
+    static void setUpBeforeClass() {
+        println "Inside setUpBeforeClass()"
     }
 
     @Before
-    void before() {
-        println "Inside before()"
+    void setUp() {
+        println "Inside setUp()"
     }
 
     @Test
@@ -32,12 +32,12 @@ class MyJavaClassJunit4Test {
     }
 
     @After
-    void after() {
-        println "Inside after()"
+    void tearDown() {
+        println "Inside tearDown()"
     }
 
     @AfterClass
-    static void tearDown() {
-        println "Inside tearDown()"
+    static void tearDownAfterClass() {
+        println "Inside tearDownAfterClass()"
     }
 }
